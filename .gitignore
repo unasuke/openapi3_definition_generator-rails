@@ -1,0 +1,7 @@
+.bundle/
+log/*.log
+pkg/
+test/dummy/log/*.log
+test/dummy/node_modules/
+test/dummy/yarn-error.log
+test/dummy/tmp/
