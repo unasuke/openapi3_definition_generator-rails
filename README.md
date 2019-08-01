@@ -1,5 +1,7 @@
 # Openapi3DefinitionGenerator::Rails
-Short description and motivation.
+Generate minimum OpenAPI 3 definition YAML from `config/routes.rb` in your Rails application.
+
+:warning: This gem uses Rails private API so may be broken in future.
 
 ## Usage
 How to use my plugin.
@@ -12,13 +14,9 @@ gem 'openapi3_definition_generator-rails'
 ```
 
 And then execute:
-```bash
-$ bundle
-```
 
-Or install it yourself as:
 ```bash
-$ gem install openapi3_definition_generator-rails
+$ bin/rails openapi3_definition:generate_yaml
 ```
 
 ## Contributing
