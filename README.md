@@ -1,4 +1,6 @@
 # Openapi3DefinitionGenerator::Rails
+[![CircleCI](https://circleci.com/gh/unasuke/openapi3_definition_generator-rails.svg?style=svg)](https://circleci.com/gh/unasuke/openapi3_definition_generator-rails)
+
 Generate minimum OpenAPI 3 definition YAML from `config/routes.rb` in your Rails application.
 
 :warning: This gem uses Rails private API so may be broken in future.
