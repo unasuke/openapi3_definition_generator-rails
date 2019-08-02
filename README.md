@@ -21,6 +21,70 @@ And then execute:
 $ bin/rails openapi3_definition:generate_yaml
 ```
 
+## example
+In this `config/routes.rb` ...
+
+```ruby
+Rails.application.routes.draw do
+  resources :users
+
+  get '/foo/:bar', to: 'foo#show'
+end
+```
+
+generates this yaml.
+
+```yaml
+---
+openapi: 3.0.0
+info:
+  title: ''
+  description: ''
+  version: 0.1.0
+paths:
+  "/users(.:format)":
+    get:
+      summary: users
+      description: users#index
+      responses:
+    post:
+      summary: ''
+      description: users#create
+      responses:
+  "/users/new(.:format)":
+    get:
+      summary: new_user
+      description: users#new
+      responses:
+  "/users/:id/edit(.:format)":
+    get:
+      summary: edit_user
+      description: users#edit
+      responses:
+  "/users/:id(.:format)":
+    get:
+      summary: user
+      description: users#show
+      responses:
+    patch:
+      summary: ''
+      description: users#update
+      responses:
+    put:
+      summary: ''
+      description: users#update
+      responses:
+    delete:
+      summary: ''
+      description: users#destroy
+      responses:
+  "/foo/:bar(.:format)":
+    get:
+      summary: ''
+      description: foo#show
+      responses:
+```
+
 ## Contributing
 Contribution directions go here.
 
